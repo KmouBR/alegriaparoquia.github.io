@@ -175,7 +175,7 @@ h1 {
         .hero .hero-img-wrap img {
           left: 0px;
           top: -80px;
-          position: absolute;
+          position: relative;
           right: -50px; } }
       @media (min-width: 1200px) {
         .hero .hero-img-wrap img {
@@ -184,7 +184,7 @@ h1 {
           right: -100px; } }
     .hero .hero-img-wrap:after {
       content: "";
-      position: absolute;
+      position: relative;
       width: 255px;
       height: 217px;
       background-image: url("../images/dots-light.svg");
