@@ -30,6 +30,42 @@ a {
   a.more {
     font-weight: 600; }
 
+
+.container {
+  width: 90%; /* Ocupa 90% da largura da tela */
+  max-width: 1200px; /* Limite máximo de largura */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Estilo para textos principais */
+h1 {
+  font-size: 2rem; /* Tamanho do texto ajustável */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Menu responsivo */
+.menu {
+  display: flex; /* Exibe os itens em linha */
+  justify-content: space-around; /* Espaçamento uniforme */
+  list-style: none; /* Remove marcadores de lista */
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo para telas menores que 768px (celulares) */
+@media (max-width: 768px) {
+  .menu {
+    display: block; /* Exibe os itens como uma coluna */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Reduz o tamanho do texto */
+  }
+}
+
+
+
 .custom-navbar {
   background: #000000bb !important;
   padding-top: 20px;
@@ -126,8 +162,10 @@ a {
       position: relative;
       top: 0px;
       right: 0px;
+      height: auto;
+      display: block;
       z-index: 2;
-      max-width: 780px;
+      max-width: 100%px;
       left: -20px; }
       @media (min-width: 768px) {
         .hero .hero-img-wrap img {
@@ -582,12 +620,15 @@ a {
     .footer-section .subscription-form .btn {
       border-radius: 10px !important; }
   .footer-section .sofa-img {
-    position: absolute;
+    position: relative;
     top: -50px;
     z-index: 1;
     right: 0; }
     .footer-section .sofa-img img {
-      max-width: 380px; }
+      max-width: 100%;
+      height: auto;      /* Mantém a proporção da imagem */
+      display: block;    /* Evita que a imagem tenha margens extras */
+      margin: 0 auto;    /* Centraliza a imagem */ }
   .footer-section .links-wrap {
     margin-top: 0px; }
     @media (min-width: 992px) {
